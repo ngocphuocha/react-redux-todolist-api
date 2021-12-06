@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addTodo } from "../store/reducers/todosSlice";
+import { addTodos } from "../store/reducers/todosSlice";
 import { useDispatch } from "react-redux";
 
 const TodoForm = () => {
@@ -14,7 +14,7 @@ const TodoForm = () => {
   const addSingleTodo = (event) => {
     event.preventDefault();
     // console.log(title);
-    dispatch(addTodo(title));
+    dispatch(addTodos(title));
     setTitle("");
   };
   return (
